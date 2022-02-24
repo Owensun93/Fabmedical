@@ -1,4 +1,3 @@
-
 name: content-web
 
 # This workflow is triggered on push to the 'content-web' directory of the  master branch of the repository
@@ -21,9 +20,9 @@ on:
 # resourceGroupName，containerRegistryName，containerRegistry替换为自己的
 env:
  imageRepository: 'content-web'
- resourceGroupName: 'sunwt2'
- containerRegistryName: 'fabmedicalswt'
- containerRegistry: 'fabmedicalswt.azurecr.cn'
+ resourceGroupName: 'fabmedical-pim'
+ containerRegistryName: 'fabmedicalpim'
+ containerRegistry: 'fabmedicalpim.azurecr.cn'
  dockerfilePath: './content-web'
  tag: '${{ github.run_id  }}'
 
@@ -57,4 +56,3 @@ jobs:
         tags: |
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:${{ env.tag }}
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
-
