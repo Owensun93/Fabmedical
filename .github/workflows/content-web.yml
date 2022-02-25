@@ -21,7 +21,7 @@ env:
  imageRepository: 'content-web'
  resourceGroupName: 'sunwt2'
  containerRegistryName: 'fabmedicalswt'
- containerRegistry: ' fabmedicalswt.azurecr.cn'
+ containerRegistry: 'fabmedicalswt.azurecr.cn'
  dockerfilePath: './content-web'
  tag: '${{ github.run_id  }}'
 
@@ -70,7 +70,7 @@ jobs:
 
     - name: Helm Repo Add
       run: |
-        helm repo add fabmedicalswt https:// fabmedicalswt.azurecr.cn/helm/v1/repo --username ${{ secrets.ACR_USERNAME }} --password ${{ secrets.ACR_PASSWORD }}
+        helm repo add fabmedicalswt https://fabmedicalswt.azurecr.cn/helm/v1/repo --username ${{ secrets.ACR_USERNAME }} --password ${{ secrets.ACR_PASSWORD }}
       env:
         HELM_EXPERIMENTAL_OCI: 1
 
