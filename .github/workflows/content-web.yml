@@ -55,6 +55,7 @@ jobs:
         tags: |
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:${{ env.tag }}
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
+<<<<<<< HEAD
  build-and-push-helm-chart:
     name: Build and Push Helm Chart
     runs-on: ubuntu-latest
@@ -124,3 +125,5 @@ jobs:
       env:
         KUBECONFIG: './kubeconfig'
         HELM_EXPERIMENTAL_OCI: 1
+=======
+>>>>>>> b8f87d387fd7976947b7e6669ed029d0c432c2c6
